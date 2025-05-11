@@ -1,0 +1,6 @@
+Product: XYZ Smartphone
+- Display: 6.5" AMOLED
+- Processor: Snapdragon 888
+- RAM: 8GB
+- Storage: 128GB
+- Battery: 4500mAh
