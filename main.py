@@ -4,7 +4,7 @@ import streamlit as st
 # 🛠 This must be the first Streamlit command:
 st.set_page_config(page_title="RAG Assistant")
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import TextLoader
 from langchain.vectorstores import FAISS
@@ -13,8 +13,10 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 
 # Load env vars
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+# load_dotenv()
+# GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+
 
 # HuggingFace embedding model
 embedder = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
